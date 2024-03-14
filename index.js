@@ -25,8 +25,8 @@ app.use(express.static(path.resolve(__dirname, 'client/build')));
 app.use(bodyParser.json());
 
 const corsOptions = {
-    //origin: 'https://parserbc3.azurewebsites.net',
-    origin: 'http://localhost:3001/',
+    origin: 'https://budget2acc.azurewebsites.net/',
+    //origin: 'http://localhost:3001/',
     optionsSuccessStatus: 200
 };
 
@@ -55,8 +55,8 @@ app.get('/SelectProject/', function (req, res) {
         client_secret: secret_id,
         grant_type: 'authorization_code',
         code: code,
-        //redirect_uri: 'https://parserbc3.azurewebsites.net/SelectProject/'
-        redirect_uri: 'http://localhost:3001/SelectProject/'
+        redirect_uri: 'https://budget2acc.azurewebsites.net/SelectProject/'
+        //redirect_uri: 'http://localhost:3001/SelectProject/'
     };
     let confheaders = {
         headers: {
@@ -98,8 +98,9 @@ app.post('/upload', upload.array('myBc3'), (req, res) => {
     console.log(req.files[0]['originalname']);
     var bc3_filename = req.files[0]['originalname']
     const file_path = `uploads/${bc3_filename}`
-   // let urlBc3 = 'https://uploadbc3budget.azurewebsites.net/api/sendbc3file';
-    let urlBc3 = 'http://127.0.0.1:7071/api/send_bc3';
+    
+    let urlBc3 = 'https://sendbc3.azurewebsites.net/api/send_bc3?code=7KgayWqwxbF0hSrDRkzZ54f7uqym3Krz0gopgoMoVAflAzFuY1b-rA==';
+    //let urlBc3 = 'http://127.0.0.1:7071/api/send_bc3';
     let dataBc3 = {
         file: fs.createReadStream(file_path),
         token: token,
