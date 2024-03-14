@@ -133,7 +133,7 @@ app.post('/upload', upload.array('myBc3'), (req, res) => {
         });
 });
 
-//Llamada a APS para obtener el ID de template
+//Llamada a APS para obtener el ID de template desde Acc
 function findTemplateId() {
     let urlTemplate = `https://developer.api.autodesk.com/cost/v1/containers/${project_id}/templates`;
     let confHeadersTempl = {
