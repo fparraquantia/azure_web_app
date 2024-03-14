@@ -225,7 +225,7 @@ const UploadSuccessfully : React.FC = () => {
                                 El presupuesto {' '}
                                 <Typography
                             color="#96ce00"
-                            fontSize="12px"
+                            fontSize="14px"
                             sx={{
                                 display: 'inline', // Hace que el componente se muestre en línea
                                 textAlign: 'left',
@@ -235,7 +235,7 @@ const UploadSuccessfully : React.FC = () => {
                         </Typography>
                         <Typography
                             color="black"
-                            fontSize="12px"
+                            fontSize="14px"
                             sx={{
                                 display: 'inline', // Hace que el componente se muestre en línea
                                 textAlign: 'left',
@@ -283,7 +283,7 @@ const UploadSuccessfully : React.FC = () => {
                             }}
                                 mb={3}>
                                 * Haz click en el botón para ser redirigido al presupuesto en ACC.
-                            </Typography>ss
+                            </Typography>
                             <Button
                                             variant="contained"
                                             href={`${url_project}`}
