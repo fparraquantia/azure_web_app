@@ -99,7 +99,7 @@ app.post('/upload', upload.array('myBc3'), (req, res) => {
     var bc3_filename = req.files[0]['originalname']
     const file_path = `uploads/${bc3_filename}`
     
-    let urlBc3 = 'https://sendbc3.azurewebsites.net/api/send_bc3?code=7KgayWqwxbF0hSrDRkzZ54f7uqym3Krz0gopgoMoVAflAzFuY1b-rA==';
+    let urlBc3 = 'https://sendbc3.azurewebsites.net/api/send_bc3';
     //let urlBc3 = 'http://127.0.0.1:7071/api/send_bc3';
     let dataBc3 = {
         file: fs.createReadStream(file_path),
